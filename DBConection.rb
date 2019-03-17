@@ -2,7 +2,7 @@ require 'mysql2'
 
 class DbConnection
 
-  attr_reader :client
+  attr_reader :clientgi
 
   def initialize
     @client = Mysql2::Client.new(
