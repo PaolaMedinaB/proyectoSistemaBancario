@@ -1,14 +1,19 @@
 require_relative 'DBConnection.rb'
+require_relative 'accounts.rb'
+require_relative 'mattress.rb'
 
 class Login
   def initialize()
     @dbconnection = DBConnection.new()
+    @account_functions = Account.new()
+    @mattress_functions = Mattress.new()
   end
+
   def menu()
     print "
 		Seleccione \n
 		1- Registrar Usuario \n
-		2- Login"
+		2- Login \n"
     $selection = gets
     if $selection.to_i == 1
       return registerUser()
@@ -27,13 +32,15 @@ class Login
     puts "Password"
     $passw= gets
     time = Time.new
-    results=@dbconnection.query("INSERT INTO `test`.`users` (`name`, `email`, `password`, `registration_timestamp`, `logout`) VALUES ('#{$name}', '#{$email}', '#{$passw}', '#{time}', '1')")
+    results=@dbconnection.query("INSERT INTO `mentoria9`.`users` (`email`, `name`, `password`, `logout`, `created_at`) VALUES ('#{$email}','#{$name}', '#{$passw}','1', '#{time}')")
     results=@dbconnection.query("SELECT* FROM users  ORDER BY id DESC LIMIT 1")
     results.each do |row|
       puts  # row["id"].is_a? Integer
       @user_id = row['id']
     end
-    puts "RESGITRO EXITOSO"
+    @account_functions.create(@user_id)
+    @mattress_functions.create(@user_id)
+    puts "REGISTRO EXITOSO"
     return validate(@user_id)
   end
   def loginUser()

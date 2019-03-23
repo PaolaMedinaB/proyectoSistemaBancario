@@ -1,10 +1,14 @@
 require_relative 'login.rb'
 require_relative 'accounts.rb'
+require_relative 'pocket.rb'
+require_relative 'mattress.rb'
 
 class Menu
   def initialize()
     @classUser = Login.new()
     @classAccount = Account.new()
+    @classPocket = Pockets.new()
+    @classMattress = Mattress.new()
     @user_id = 0
   end
   def menu
@@ -12,10 +16,10 @@ class Menu
       print "
 		Seleccione \n
 		1- Cuenta  \n
-	  2- Bolsillo \n
-		3- Metas \n
-		4- Colchon \n
-		5- Transaccion "
+	  2- Transaccion \n
+		3- Colchon \n
+		4- Bolsillo \n
+		5- Metas \n "
       $selection = gets
       if $selection.to_i == 1
         Cuenta()
@@ -37,16 +41,16 @@ class Menu
     menu()
   end
   def Cuenta()
-    @classAccount.menu()
+    @classAccount.menu(@user_id)
   end
   def Bolsillo()
-    puts "BOLSILLO"
+    @classPocket.menu(@user_id)
   end
   def Metas()
     puts "METAS"
   end
   def Colchon()
-    puts "COLCHON"
+    @classMattress.menu(@user_id)
   end
   def Transaccion()
     puts "TRANSACCION"
