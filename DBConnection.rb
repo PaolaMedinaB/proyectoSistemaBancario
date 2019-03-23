@@ -1,6 +1,6 @@
 require 'mysql2'
 
-class DbConnection
+class DBConnection
 
   attr_reader :clientgi
 
@@ -10,7 +10,7 @@ class DbConnection
         username:'root',
         password:'',
         port:'3306',
-        database:'test'
+        database:'mentoria9'
     )
   end
   def query(test)
