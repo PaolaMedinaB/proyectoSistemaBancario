@@ -9,12 +9,15 @@ class Mattress
     print "
 		Seleccione \n
 		1- Ver Colchón \n
-    2- Agregar al Colchón \n"
+    2- Agregar al Colchón \n
+    3- Retirar Dinero de colchon \n"
     $selection = gets
     if $selection.to_i == 1
       show_account(user_id)
     elsif $selection.to_i == 2
       add_account(user_id)
+    elsif $selection.to_i == 3
+      remove_money(user_id)
     else
       puts "ERROR SELECCIONE UN CAMPO VALIDO"
       menu(user_id)
@@ -65,6 +68,17 @@ class Mattress
     time = Time.new
     account_idS= @id_account.get_account(user_id)
     results=@dbconnection.query("INSERT INTO `mentoria9`.`mattress` (`name`, `account_id`, `money`, `updated_at`) VALUES ('colchon', '#{account_idS}', '0', '#{time}')")
+  end
+  def remove_money(user_id)
+    puts "¿cuánto dinero desea retirar?"
+    $saldo = gets.chomp
+    $saldo = $saldo.to_i
+    $retire_saldo = $saldo.to_i
+    $money_start=get_mattress_id(user_id)
+    $saldo = $money_start - $saldo
+    account_idS= @id_account.get_account(user_id)
+    results=@dbconnection.query("UPDATE `mentoria9`.`mattress` SET `money`=  '#{$saldo}' WHERE account_id = #{account_idS}")
+    @id_account.setadd_account(user_id,$retire_saldo)
   end
 end
 #init
