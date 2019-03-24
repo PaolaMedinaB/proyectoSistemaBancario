@@ -2,6 +2,7 @@ require_relative 'login.rb'
 require_relative 'accounts.rb'
 require_relative 'pocket.rb'
 require_relative 'mattress.rb'
+require_relative 'goals.rb'
 
 class Menu
   def initialize()
@@ -9,6 +10,7 @@ class Menu
     @classAccount = Account.new()
     @classPocket = Pockets.new()
     @classMattress = Mattress.new()
+    @classGoals = Goals.new()
     @user_id = 0
   end
   def menu
@@ -47,7 +49,7 @@ class Menu
     @classPocket.menu(@user_id)
   end
   def Metas()
-    puts "METAS"
+   @classGoals.menu(@user_id)
   end
   def Colchon()
     @classMattress.menu(@user_id)
