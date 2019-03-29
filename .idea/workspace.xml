@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c91ec7de-a230-4782-92ff-9baf465de370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/goals.rb" afterDir="false" />
       <change beforePath="$USER_HOME$/Documents/Development/Rappi/mentoria9/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Documents/Development/Rappi/mentoria9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mattress.rb" beforeDir="false" afterPath="$PROJECT_DIR$/mattress.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.rb" beforeDir="false" afterPath="$PROJECT_DIR$/menu.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pocket.rb" beforeDir="false" afterPath="$PROJECT_DIR$/pocket.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pocket.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+            <state relative-caret-position="1224">
+              <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -151,12 +145,12 @@
       <option name="presentableId" value="Default" />
       <updated>1552785646299</updated>
       <workItem from="1552785647531" duration="14561000" />
-      <workItem from="1553393347774" duration="22971000" />
+      <workItem from="1553393347774" duration="23233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37532000" />
+    <option name="totallyTimeSpent" value="37794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -169,7 +163,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49844238" visible="true" weight="0.25340393" />
@@ -278,8 +271,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pocket.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        <state relative-caret-position="1224">
+          <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
         </state>
       </provider>
     </entry>
